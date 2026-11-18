@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bob Equipe é um projeto pessoal brasileiro de assistente para acompanhar projetos no Matrix, GitHub, GitLab e Google Docs.">
+  <meta name="color-scheme" content="light">
+  <title>Bob Equipe — acompanhamento de projetos</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 24px; }
+    body { margin: 0; background: #fff; color: #202421; font: 17px/1.65 system-ui, sans-serif; }
+    a { color: #215739; text-underline-offset: 4px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 3px solid #a86310; outline-offset: 5px; }
+    .wrap { max-width: 1060px; margin: auto; padding: 0 32px; }
+    header { border-bottom: 1px solid #d8ddd8; }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 88px; }
+    .brand { color: #202421; font-size: 22px; font-weight: 750; letter-spacing: -.5px; text-decoration: none; }
+    nav { display: flex; gap: 24px; font-size: 15px; }
+    nav a { color: #424b43; }
+    main { padding-bottom: 64px; }
+    .intro { padding: 64px 0 46px; }
+    .label { margin: 0 0 18px; color: #5d665e; font-size: 12px; font-weight: 650; letter-spacing: 1.5px; text-transform: uppercase; }
+    h1 { max-width: 800px; margin: 0 0 24px; font-size: clamp(32px, 4.5vw, 52px); line-height: 1.13; letter-spacing: -1.6px; font-weight: 680; }
+    .intro p:last-child { max-width: 740px; margin-bottom: 0; color: #515b52; font-size: 19px; }
+    section { border-top: 1px solid #d8ddd8; padding: 32px 0; }
+    h2 { margin: 0 0 12px; font-size: 22px; line-height: 1.3; font-weight: 650; }
+    p { margin: 0 0 16px; max-width: 800px; }
+    .flow { display: flex; align-items: center; gap: 18px; padding: 24px 0 4px; font-size: 16px; }
+    .flow span { flex: 1; }
+    .flow b { color: #667167; font-weight: 400; }
+    .flow small { display: block; color: #667167; margin-top: 5px; }
+    table { width: 100%; margin-top: 22px; border-collapse: collapse; text-align: left; }
+    th, td { border-bottom: 1px solid #d8ddd8; padding: 14px 12px 14px 0; vertical-align: top; }
+    th { color: #5d665e; font-size: 12px; letter-spacing: .6px; text-transform: uppercase; }
+    td:first-child { width: 23%; font-weight: 600; }
+    .note { margin-top: 20px; color: #667167; font-size: 14px; }
+    footer { border-top: 1px solid #d8ddd8; color: #667167; font-size: 13px; }
+    footer .wrap { padding-top: 22px; padding-bottom: 28px; }
+    @media (max-width: 600px) {
+      .wrap { padding-left: 20px; padding-right: 20px; }
+      header .wrap { align-items: flex-start; flex-direction: column; justify-content: center; gap: 8px; padding-top: 18px; padding-bottom: 18px; }
+      nav { gap: 20px; }
+      .intro { padding-top: 40px; }
+      h1 { letter-spacing: -.8px; }
+      .flow { align-items: flex-start; flex-direction: column; gap: 12px; }
+      .flow b { transform: rotate(90deg); margin-left: 4px; }
+      table { font-size: 15px; }
+      td:first-child { width: 30%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="brand" href="#inicio">Bob Equipe</a>
+      <nav aria-label="Navegação principal">
+        <a href="#projeto">Projeto</a>
+        <a href="#integracoes">Integrações</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+  <main id="inicio" class="wrap">
+    <div class="intro">
+      <p class="label">Projeto pessoal · Brasil · Em desenvolvimento</p>
+      <h1>Um agente para acompanhar o trabalho da equipe.</h1>
+      <p>Bob recebe um pedido, consulta as fontes autorizadas do projeto e devolve uma resposta ou um checklist. Os testes atuais usam Matrix, GitHub, GitLab e Google Docs.</p>
+    </div>
+    <section id="projeto" aria-labelledby="titulo-projeto">
+      <h2 id="titulo-projeto">Um pedido, com fontes para conferir</h2>
+      <p>Por exemplo: pedir uma análise de um pull request no Matrix e receber o link de um documento com o checklist. A revisão humana continua necessária.</p>
+      <div class="flow" aria-label="Fluxo de um pedido ao Bob">
+        <span>Pedido no Matrix<small>O responsável define o que consultar</small></span>
+        <b aria-hidden="true">→</b>
+        <span>Consulta às fontes<small>Repositórios e documentos autorizados</small></span>
+        <b aria-hidden="true">→</b>
+        <span>Resposta e checklist<small>Resultado com referências para revisão</small></span>
+      </div>
+    </section>
+    <section id="integracoes" aria-labelledby="titulo-integracoes">
+      <h2 id="titulo-integracoes">Integrações em teste</h2>
+      <p>O acesso é concedido por objetivo. O agente trabalha dentro das permissões definidas pelo responsável pelo projeto.</p>
+      <table>
+        <caption class="label" style="text-align:left; margin-top:16px">Situação do protótipo em 18 de novembro de 2026</caption>
+        <thead><tr><th scope="col">Ferramenta</th><th scope="col">Uso atual</th></tr></thead>
+        <tbody>
+          <tr><td>Matrix</td><td>Conversas, comandos e retorno ao responsável.</td></tr>
+          <tr><td>GitHub e GitLab</td><td>Consultas de commits, pull requests e merge requests.</td></tr>
+          <tr><td>Google Docs</td><td>Leitura de documentos e criação de checklists autorizados.</td></tr>
+          <tr><td>WhatsApp</td><td>Integração direta com a Cloud API da Meta em validação. Ainda indisponível para uso público.</td></tr>
+        </tbody>
+      </table>
+      <p class="note">O protótipo está em avaliação interna. Não há cadastro aberto, venda de planos ou serviço público de mensagens nesta página.</p>
+    </section>
+    <section id="contato" aria-labelledby="titulo-contato">
+      <h2 id="titulo-contato">Responsável e contato</h2>
+      <p>Projeto pessoal desenvolvido no Brasil por <a href="https://github.com/jhenrique04">jhenrique04</a>. Informações públicas e canais disponíveis estão no perfil do responsável no GitHub.</p>
+      <p>Esta página é informativa. Não possui formulários, cadastro de usuários ou ferramentas próprias de análise de visitas. Nenhuma conversa ou documento do agente é publicado aqui.</p>
+      <p class="note">Hospedagem: GitHub Pages. O tratamento de dados de acesso pela hospedagem segue a <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">declaração de privacidade do GitHub</a>.</p>
+    </section>
+  </main>
+  <footer><div class="wrap">Bob Equipe · Projeto pessoal em desenvolvimento · Brasil</div></footer>
+</body>
+</html>
